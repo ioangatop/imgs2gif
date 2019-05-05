@@ -1,5 +1,6 @@
 # imgs2gif
 [![License](http://img.shields.io/:license-mit-blue.svg)](LICENSE)
+
 gif creator from multiple images in pure Python.
 
 ### Introduction
