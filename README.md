@@ -1,4 +1,5 @@
 # imgs2gif
+[![License](http://img.shields.io/:license-mit-blue.svg)](LICENSE)
 gif creator from multiple images in pure Python.
 
 ### Introduction
@@ -24,7 +25,7 @@ The purpuse of this reposetory is to provide a quick solution to produce high qu
 One option is to run the sample code by typing:
 
 ```
-./imgs2gif.py --image_path="folder_path"
+python imgs2gif.py --image_path="folder_path"
 ```
 A second is to import is as
 ```
