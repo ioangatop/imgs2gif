@@ -1,9 +1,9 @@
-import argparse
-import imageio
 import os
 import re
+import argparse
+import imageio
 
-def imags2gif(image_path, gif_path, gif_name, gif_duration=0.035):
+def imgs2gif(image_path, gif_path='', gif_name='gif_image', gif_duration=0.035):
     ''' Creats .gif images from bunch of images.
 
     Args:
@@ -38,12 +38,12 @@ def imags2gif(image_path, gif_path, gif_name, gif_duration=0.035):
     images = list(map(lambda filename: imageio.imread(filename), filenames))
 
     # Build the .gif image and save it
-    imageio.mimsave(os.image_path.join(gif_path+gif_name+'.gif'), images, duration=gif_duration)
+    imageio.mimsave(os.path.join(gif_path+gif_name+'.gif'), images, duration=gif_duration)
 
 if __name__ == "__main__":
     PARSER = argparse.ArgumentParser()
 
-    PARSER.add_argument('--image_path', type=str, default="",
+    PARSER.add_argument('--image_path', type=str, default="", required=True,
                         help='Path of images.')
     PARSER.add_argument('--gif_path', type=str, default="",
                         help='Output path for .gif image.')
