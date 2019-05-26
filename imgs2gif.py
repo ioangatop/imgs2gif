@@ -25,7 +25,7 @@ def imgs2gif(image_path, gif_path='', gif_name='gif_image', gif_duration=0.035):
         if filename.endswith(('.jpeg', '.png', '.gif')):
             filenames.append(image_path+filename)
 
-    # Sort the files 
+    # Sort the files
     # -- Because the names are str with char and numbers,
     #    we need to construct the sort function.
     def atoi(text):
@@ -54,4 +54,7 @@ if __name__ == "__main__":
 
     ARGS = PARSER.parse_args()
 
-    imgs2gif(image_path=ARGS.image_path, gif_path=ARGS.gif_path, gif_name=ARGS.gif_name, gif_duration=ARGS.gif_duration)
+    imgs2gif(image_path=ARGS.image_path,
+             gif_path=ARGS.gif_path,
+             gif_name=ARGS.gif_name,
+             gif_duration=ARGS.gif_duration)
