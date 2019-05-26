@@ -47,11 +47,11 @@ if __name__ == "__main__":
                         help='Path of images.')
     PARSER.add_argument('--gif_path', type=str, default="",
                         help='Output path for .gif image.')
-    PARSER.add_argument('--gif_name', type=str, default="vae",
+    PARSER.add_argument('--gif_name', type=str, default="gif_image",
                         help='Name of the output .gif image.')
     PARSER.add_argument('--gif_duration', type=float, default=0.035,
                         help='Duration between images of .gif.')
 
     ARGS = PARSER.parse_args()
 
-    imags2gif(image_path=ARGS.image_path, gif_path=ARGS.gif_path, gif_name=ARGS.gif_name, gif_duration=ARGS.gif_duration)
+    imgs2gif(image_path=ARGS.image_path, gif_path=ARGS.gif_path, gif_name=ARGS.gif_name, gif_duration=ARGS.gif_duration)
